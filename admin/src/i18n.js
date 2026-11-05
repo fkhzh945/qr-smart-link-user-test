@@ -263,3 +263,4 @@ function initialLocale() {
 export const locale = ref(initialLocale());
 export const t = (key) => translations[locale.value]?.[key] ?? translations.en[key] ?? key;
 watch(locale, value => { localStorage.setItem('qr-lite-locale', value); document.documentElement.lang=value; }, {immediate:true});
+// upgrade-acceptance-test: deliberately outdated copy; upstream update should remove this line.
